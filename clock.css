@@ -2,8 +2,8 @@
   background-color: #f6ee21;
   border: 5px solid #191919;
   margin: 1em auto;
-  height: 350px;
-  width: 350px;
+  height: 30vw;
+  width: 30vw;
   border-radius: 50%;
   display: flex;
   justify-content: center; }
@@ -16,18 +16,18 @@
     transform-origin: bottom center;
     z-index: 2; }
   .clock .minute {
-    height: 140px;
-    margin-top: 35px; }
+    height: calc(12.8vw);
+    margin-top: 2.2vw; }
   .clock .hour {
-    height: 95px;
-    margin-top: 80px; }
+    height: calc(9vw);
+    margin-top: 6vw; }
   .clock .indicator {
-    height: 155px;
-    border-top: 20px solid #191919;
+    height: calc(14vw);
+    border-top: 1vw solid #191919;
     background: none; }
   .clock .indicator:nth-of-type(5n + 1) {
-    height: 145px;
-    border-top: 30px solid #191919; }
+    height: calc(13vw);
+    border-top: 2vw solid #191919; }
 
 section:nth-of-type(1) {
   transform: rotateZ(calc(-6deg * 0)); }

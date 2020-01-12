@@ -2,7 +2,7 @@
 // gem install sass
 // sass --sourcemap=none --watch clock.scss:clock.css
 
-$size: 350px;
+$size: 30vw;
 $black: #191919;
 $yellow : #f6ee21;
 $red : #DD2324;
@@ -27,21 +27,21 @@ $red : #DD2324;
     z-index: 2;
   }
   .minute {
-    height: #{($size / 2) - 35};
-    margin-top: 35px;
+    height: calc(#{($size / 2) - 2.2vw});
+    margin-top: 2.2vw;
   }
   .hour {
-    height: #{($size / 2) - 80};
-    margin-top: 80px;
+    height: calc(#{($size / 2) - 6vw});
+    margin-top: 6vw;
   }
   .indicator {
-    height: #{($size / 2) - 20};
-    border-top: 20px solid $black;
+    height: calc(#{($size / 2) - 1vw});
+    border-top: 1vw solid $black;
     background: none;
   }
   .indicator:nth-of-type(5n + 1) {
-    height: #{($size / 2) - 30};
-    border-top: 30px solid $black;
+    height: calc(#{($size / 2) - 2vw});
+    border-top: 2vw solid $black;
   }
 }
 
