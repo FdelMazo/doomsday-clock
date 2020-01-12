@@ -76,3 +76,9 @@ section:nth-of-type(15) {
 
 section:nth-of-type(16) {
   transform: rotateZ(calc(-6deg * 15)); }
+
+@media (max-width: 800px) {
+  .clock .indicator {
+    display: none; }
+  .clock .indicator:nth-of-type(5n + 1) {
+    display: initial; } }

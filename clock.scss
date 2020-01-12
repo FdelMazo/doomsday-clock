@@ -51,3 +51,15 @@ $red : #DD2324;
   }
 }
 
+@media (max-width: 800px) {
+  .clock {
+    .indicator {
+      display: none;
+    }
+    .indicator:nth-of-type(5n + 1) {
+      display:initial;
+    }
+  }
+  
+}
+
