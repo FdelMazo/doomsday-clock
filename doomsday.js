@@ -1,26 +1,22 @@
 let YEARS = []
-let DESCRIPTIONS = {}
-let TOMIDNIGHTS = {}
 
 $(document).ready(function() {
-    DB.forEach(function(entry) {
-        YEARS.push(entry.year)
-        DESCRIPTIONS[entry.year] = entry.description
-        TOMIDNIGHTS[entry.year] = entry.tomidnight
+    Object.keys(DB).forEach(function(key) {
+        YEARS.push(key)
     })
     
     $("#prev").on("click", function (event) {
-        clock(getPrev(parseInt($("#year").val())))
+        clock(getPrev($("#year").val()))
     })
     $("#next").on("click", function (event) {
-        clock(getNext(parseInt($("#year").val())))
+        clock(getNext($("#year").val()))
     })
     $(document).on("keyup", function (event) {
         if (event.keyCode === 37) {
-            clock(getPrev(parseInt($("#year").val())))
+            clock(getPrev($("#year").val()))
         }
         if (event.keyCode == 39) {
-            clock(getNext(parseInt($("#year").val())))
+            clock(getNext($("#year").val()))
         }
     })
 
@@ -28,9 +24,10 @@ $(document).ready(function() {
 })
 
 function clock(year) {
+    year = parseInt(year)
     $("#year").val(year)
-    $("#description").text(DESCRIPTIONS[year])
-    let deg = TOMIDNIGHTS[year] * -6
+    $("#description").text(DB[year].description)
+    let deg = DB[year].tomidnight * -6
     $(".clock .minute").css('transform', 'rotateZ(calc('+deg+'deg)');
 }
 
