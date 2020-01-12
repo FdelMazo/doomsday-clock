@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    max-width: 38rem;
+    padding: 2rem;
+    margin: auto;
+    background-color: #191919;
+    color: #fffffe;
+}
+
+p {
+    color: #94a1b2
+}
+
+a {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input {
+    text-align: center;
+    width: 6ch
+}

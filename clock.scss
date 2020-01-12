@@ -1,0 +1,53 @@
+// sudo apt install ruby
+// gem install sass
+// sass --sourcemap=none --watch clock.scss:clock.css
+
+$size: 350px;
+$black: #191919;
+$yellow : #f6ee21;
+$red : #DD2324;
+
+.clock {
+  background-color: $yellow;
+  border: 5px solid $black;
+  margin: 1em auto;
+  height: $size;
+  width: $size;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  .minute, .hour {
+      border-radius: 70%;
+  }
+  .minute, .hour, .indicator {
+    position: absolute;
+    width: 5px;
+    background: $black;
+    transform-origin: bottom center;
+    z-index: 2;
+  }
+  .minute {
+    height: #{($size / 2) - 35};
+    margin-top: 35px;
+  }
+  .hour {
+    height: #{($size / 2) - 80};
+    margin-top: 80px;
+  }
+  .indicator {
+    height: #{($size / 2) - 20};
+    border-top: 20px solid $black;
+    background: none;
+  }
+  .indicator:nth-of-type(5n + 1) {
+    height: #{($size / 2) - 30};
+    border-top: 30px solid $black;
+  }
+}
+
+@for $i from 1 through 16 {
+  section:nth-of-type(#{$i}) {
+    transform: rotateZ(calc(-6deg * #{$i - 1}));
+  }
+}
+
