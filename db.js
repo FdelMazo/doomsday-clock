@@ -94,7 +94,7 @@ let DB = {
   2018: {
     "tomidnight": 2,
     "description": "The failure of world leaders to deal with looming threats of nuclear war and climate change. This is the clock's closest approach to midnight, matching that of 1953. In 2019, the Bulletin reaffirmed the 'two minutes to midnight' time, citing continuing climate change and Trump administration's abandonment of U.S. efforts to lead the world toward decarbonization; U.S. withdrawal from Joint Comprehensive Plan of Action and Intermediate-Range Nuclear Forces Treaty; U.S. and Russian nuclear modernization efforts; information warfare threats and other dangers from 'disruptive technologies' such as synthetic biology, artificial intelligence, and cyberwarfare."
-  }
+  },
   2020: {
     "tomidnight": 1.66,
     "description": "The failure of world leaders to deal with increasingly likely threats of nuclear war, such as the end of the Intermediate-Range Nuclear Forces Treaty (INF) between the United States and Russia as well as increased tensions between the US and Iran, and the continued inability to combat climate change. This is the clock's closest approach to midnight, exceeding that of 1953 and 2018."
