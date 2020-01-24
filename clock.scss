@@ -29,6 +29,7 @@ $red : #DD2324;
   .minute {
     height: calc(#{($size / 2) - 2.2vw});
     margin-top: 2.2vw;
+    transition: transform 300ms ease;
   }
   .hour {
     height: calc(#{($size / 2) - 6vw});
@@ -61,5 +62,24 @@ $red : #DD2324;
     }
   }
   
+}
+
+@keyframes changeText {
+  0% {
+    content: attr(lastdesc);
+  }
+  50% {
+    color: $black;
+  }
+  100% {
+    content: attr(desc);
+  }
+}
+
+.animation {
+  &::before {
+    content: '';
+    animation: changeText 1s 1 linear forwards;
+  }
 }
 
