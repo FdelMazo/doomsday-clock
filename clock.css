@@ -17,7 +17,8 @@
     z-index: 2; }
   .clock .minute {
     height: calc(12.8vw);
-    margin-top: 2.2vw; }
+    margin-top: 2.2vw;
+    transition: transform 300ms ease; }
   .clock .hour {
     height: calc(9vw);
     margin-top: 6vw; }
@@ -82,3 +83,15 @@ section:nth-of-type(16) {
     display: none; }
   .clock .indicator:nth-of-type(5n + 1) {
     display: initial; } }
+@keyframes changeText {
+  0% {
+    content: attr(lastdesc); }
+  50% {
+    color: #191919; }
+  100% {
+    content: attr(desc); } }
+.animation::before {
+  content: '';
+  animation: changeText 1s 1 linear forwards; }
+
+/*# sourceMappingURL=clock.css.map */

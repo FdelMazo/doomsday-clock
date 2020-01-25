@@ -26,9 +26,20 @@ $(document).ready(function() {
 function clock(year) {
     year = parseInt(year)
     $("#year").val(year)
-    $("#description").text(DB[year].description)
+    
+    updateText(year);
+    
     let deg = DB[year].tomidnight * -6
     $(".clock .minute").css('transform', 'rotateZ(calc('+deg+'deg)');
+}
+
+function updateText(year) {
+    $("#description").removeClass("animation")
+    var lastdesc = $("#description").attr("desc")
+    $("#description").attr("desc", DB[year].description)
+    $("#description").attr("lastdesc", lastdesc)
+    $("#description").focus(); //forces relayout to restart animation
+    $("#description").addClass("animation");
 }
 
 function getNext(year){
