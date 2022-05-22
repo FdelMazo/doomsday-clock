@@ -1,7 +1,9 @@
 .clock {
   background-color: #f6ee21;
   border: 5px solid #191919;
-  margin: 1em auto;
+  margin: 1em;
+  margin-left: 50%;
+  transform: translateX(-50%);
   height: 30vw;
   width: 30vw;
   border-radius: 50%;
